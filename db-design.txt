@@ -1,0 +1,30 @@
+User Table:
+email passs, name
+has_many Invites
+has_many Events
+
+
+Event Table:
+belongs_to User
+has_many Sttendees
+has_many Invites
+title string,
+description text,
+location string
+creator int
+invited_users int
+attendee_id int
+event_date datetime (maybe has a scope to check if the event has passed and move it to a "past events" tab)
+
+
+Invite Table:
+belong_to Event
+belong_to_has_many Users
+user_id int
+
+
+Attendee Table:
+belong_to Event
+has_many invited_users
+
+user_id int
