@@ -28,3 +28,8 @@ belong_to Event
 has_many invited_users
 
 user_id int
+
+t.string :title
+      t.text :description
+      t.string :location
+      t.datetime :event_date
